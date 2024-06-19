@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paystack Payment in USD</title>
+</head>
+
+<body>
+    <button id="paystackButton">Pay with Paystack</button>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+        document.getElementById('paystackButton').addEventListener('click', function () {
+            var handler = PaystackPop.setup({
+                key: 'pk_test_15f0d05dacd760b3799ea26afad4f13b62d37186', // Replace with your public key
+                email: 'customer@example.com',
+                amount: 10000, // Amount in cents (e.g., 10000 cents = $100.00)
+                currency: 'NGN', // Specify USD for the currency
+                callback: function (response) {
+                    alert('Payment successful. Transaction reference: ' + response.reference);
+                },
+                onClose: function () {
+                    alert('Transaction was not completed, window closed.');
+                },
+            });
+            handler.openIframe();
+        });
+    </script>
+</body>
+
+</html>
