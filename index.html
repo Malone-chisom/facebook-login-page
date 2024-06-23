@@ -54,7 +54,7 @@
                         align-items: center;
                         /* Centers vertically */
                         height: 75.10vh;
-                        min-height: 75.10vh;
+                        /* min-height: 75.10vw; */
                         /* Full viewport height */
                         background-color: #f0f0f0;
                 }
@@ -71,14 +71,7 @@
                 }
 
                 .f-container {
-                        position: absolute;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: end;
-
-                        height: inherit;
-
+                        /* line-height: 1.5px; */
                 }
 
                 .f-container div a {
@@ -87,25 +80,42 @@
                 }
 
                 .f-gap {
-                        gap: 1.50em;
+                        gap: 2vw;
+                        flex-wrap: wrap;
+                        height: 30px;
+                        margin: 0px;
+                        padding: 0px;
+                }
+
+                .f-gap .uu {
+
+                        /* line-height: 1rem; */
+                        height: none;
+                        margin: 0;
+                        padding: none;
                 }
 
                 .inner-container {
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                        padding: 20px 15px;
-                        width: 50vh;
-                        min-width: 50vh;
-                        max-width: 90%;
+                        padding: 1.50vw 15px;
+                        width: 25vw;
+                        /* background-color: #22b512; */
+                        min-width: 300px;
+                        /* max-width: 90%; */
                         height: auto;
                         box-sizing: border-box;
-                        height: auto;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 }
 
 
                 .logo {
-                        width: 15%;
+                        /* width: 15%; */
                         margin-top: -30px;
+                }
+
+                .logo img {
+                        width: 20vw;
+                        min-width: 240px;
                 }
 
                 h2 {
@@ -206,7 +216,7 @@
                                 <div class="w-[80%] txtSize flex flex-col text-white ">
 
                                         <div class="flex f-gap">
-                                                <div><a href="https://en-gb.facebook.com/"
+                                                <div class="uu"><a href="https://en-gb.facebook.com/"
                                                                 class="text-gray-600 hover:text-black">English
                                                                 (UK)</a>
                                                 </div>
